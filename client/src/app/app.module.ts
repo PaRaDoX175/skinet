@@ -8,6 +8,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 import { ShopModule } from './shop/shop.module';
 import { CommonModule } from '@angular/common';
+import { TestComponent } from './test/test.component';
+import { TestModule } from './test/test.module';
+
 
 
 
@@ -21,7 +24,8 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule, 
-    ShopModule
+    ShopModule,
+    TestModule
   ],
   providers: [],
   bootstrap: [AppComponent],
