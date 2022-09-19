@@ -22,7 +22,13 @@ export class NavBarComponent implements OnInit {
   }
 
   logout() {
+    // this.basketService.deleteBasket(this.basketService.getCurrentBasketValue());
+    this.basket$.subscribe(x => x.items = []);
     this.accountService.logout();
+  }
+
+  clearBasket() {
+   var b = this.basket$.subscribe(x => x.items = []);
   }
 
 }
