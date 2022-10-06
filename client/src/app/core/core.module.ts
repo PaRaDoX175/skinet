@@ -13,7 +13,7 @@ import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
-  declarations: [TestErrorComponent, NotFoundComponent, ServerErrorComponent, SectionHeaderComponent],
+  declarations: [TestErrorComponent, NotFoundComponent, ServerErrorComponent, SectionHeaderComponent, NavBarComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -25,7 +25,8 @@ import { SharedModule } from '../shared/shared.module';
     })
   ],
   exports: [
-    SectionHeaderComponent
+    SectionHeaderComponent,
+    NavBarComponent
   ]
 })
 export class CoreModule { }

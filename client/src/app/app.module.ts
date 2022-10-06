@@ -15,11 +15,16 @@ import { LoadingInterceptor } from './core/interceptors/loading.interceptors';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderDetailedComponent } from './orders/order-detailed/order-detailed.component';
+import { BasketComponent } from './basket/basket.component';
+import { BasketModule } from './basket/basket.module';
+import { CommonModule } from '@angular/common';
  
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    // NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { JwtInterceptor } from './core/interceptors/jwt.interceptor';
     HomeModule,
     NgxSpinnerModule,
     BsDropdownModule.forRoot(),
-    CdkStepperModule
+    CdkStepperModule,
+    BasketModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
